@@ -203,6 +203,6 @@ vim.keymap.set("n", "<leader>p1", ":lua Tr_svk1()<CR>", { noremap = true, silent
 vim.keymap.set("n", "<leader>p2", ":lua Tr_svk2()<CR>", { noremap = true, silent = true }) -- SVK, OR, niti
 
 vim.keymap.set("n", "<leader>pl", ":lua Tr_svk_length()<CR>", { noremap = true, silent = true }) -- SVK length
-vim.keymap.set("n", "<leader>ps", ":lua Tr_vlookup_1mpr_2dir()<CR>", { noremap = true, silent = true }) -- weekly reports
+vim.keymap.set("n", "<leader>ps", ":lua Tr_lookup_1mpr_2dir()<CR>", { noremap = true, silent = true }) -- weekly reports
 
 ------------------------------------------------------------

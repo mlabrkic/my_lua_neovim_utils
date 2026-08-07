@@ -22,7 +22,7 @@
 -- Overwrite 1mpr.txt with the result.
 
 --------------------
-function Tr_vlookup_1mpr_2dir()
+function Tr_lookup_1mpr_2dir()
   -- Get buffer numbers
   local buf1 = vim.fn.bufnr("1mpr.txt")
   local buf2 = vim.fn.bufnr("2dir.txt")
