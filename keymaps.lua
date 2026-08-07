@@ -34,20 +34,20 @@ LSP settings.
 We'll write a basic lua function that wraps vim.keymap.set()
 ]]
 local keymap = function(mode, key, result, desc)
-	-- if desc then
-	--   desc = 'LSP: ' .. desc
-	-- end
-	-- vim.keymap.set(mode, key, result, {remap = false, silent = true, desc = desc})
-	vim.keymap.set(mode, key, result, { desc = desc, silent = true })
+  -- if desc then
+  --   desc = 'LSP: ' .. desc
+  -- end
+  -- vim.keymap.set(mode, key, result, {remap = false, silent = true, desc = desc})
+  vim.keymap.set(mode, key, result, { desc = desc, silent = true })
 end
 
 local keymapExpr = function(mode, key, result, desc)
-	vim.keymap.set(mode, key, result, { desc = desc, silent = true, expr = true })
+  vim.keymap.set(mode, key, result, { desc = desc, silent = true, expr = true })
 end
 
 local keymapRemap = function(mode, key, result, desc)
-	-- vim.keymap.set(mode, key, result, {remap = true, silent = true, desc = desc})
-	vim.keymap.set(mode, key, result, { desc = desc, remap = true })
+  -- vim.keymap.set(mode, key, result, {remap = true, silent = true, desc = desc})
+  vim.keymap.set(mode, key, result, { desc = desc, remap = true })
 end
 --[[
 mode - the editor mode for the mapping (e.g., i for "insert" mode).
@@ -86,11 +86,11 @@ keymap("n", "ž", "<cmd>BufferLinePick<cr>", "select buffer")
 -- see https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
 -- :echo(expand("%:p:h"))
 keymap(
-	"n",
-	-- "<leader>cd",
-	"<localleader>d",
-	"<cmd>cd %:p:h<cr><cmd>pwd<cr>",
-	"Switch to the directory of the open buffer, and print cwd after that."
+  "n",
+  -- "<leader>cd",
+  "<localleader>d",
+  "<cmd>cd %:p:h<cr><cmd>pwd<cr>",
+  "Switch to the directory of the open buffer, and print cwd after that."
 )
 
 -- My <F12> is binded to lsp rename
@@ -161,10 +161,10 @@ keymap("n", "<C-q>", "<C-v>", "Enter visual block mode")
 keymap("x", "<C-c>", '"+y', '  Copy selected text to clipboard - Selection registers "* and "+')
 
 keymap(
-	"n",
-	"<C-y>",
-	'"+yg_',
-	'  Copy line (start from cursor position) to clipboard - Selection registers "* and "+'
+  "n",
+  "<C-y>",
+  '"+yg_',
+  '  Copy line (start from cursor position) to clipboard - Selection registers "* and "+'
 )
 
 -- vim.opt.iskeyword:append("-")
@@ -203,5 +203,6 @@ vim.keymap.set("n", "<leader>p1", ":lua Tr_svk1()<CR>", { noremap = true, silent
 vim.keymap.set("n", "<leader>p2", ":lua Tr_svk2()<CR>", { noremap = true, silent = true }) -- SVK, OR, niti
 
 vim.keymap.set("n", "<leader>pl", ":lua Tr_svk_length()<CR>", { noremap = true, silent = true }) -- SVK length
+vim.keymap.set("n", "<leader>ps", ":lua Tr_vlookup_1mpr_2dir()<CR>", { noremap = true, silent = true }) -- weekly reports
 
 ------------------------------------------------------------

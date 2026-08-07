@@ -7,6 +7,7 @@ require("utils.insert_opc_sc_apc")
 require("utils.tr_svk_1")
 require("utils.tr_svk_2")
 require("utils.tr_svk_length") -- SVK length
+require("utils.tr_lookup_1mpr_2dir") -- weekly reports
 
 require("utils.removeDuplicateLines")
 require("utils.svkAPPcsvKeepLastColumn")
