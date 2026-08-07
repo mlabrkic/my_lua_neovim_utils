@@ -38,8 +38,21 @@ function Tr_svk_length()
     QsumInColum
     w
     bd
-    normal pbj
   ]])
 
   --------------------
+  -- vim.api.nvim_buf_set_text()
+
+  local bufnr = 0 -- current buffer
+  local row = vim.api.nvim_win_get_cursor(0)[1] -- 1-based row
+
+  vim.api.nvim_buf_set_lines(bufnr, row - 1, row, false, {
+    -- "new line content",
+    "svkApp:",
+  })
+
+  --------------------
+  vim.cmd([[
+    normal jpbj
+  ]])
 end
